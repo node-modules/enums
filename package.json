@@ -1,0 +1,35 @@
+{
+  "name": "enum",
+  "version": "0.0.0",
+  "description": "enum define",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --check-leaks -R spec test/*.test.js",
+    "jshint": "jshint .",
+    "autod": "autod -w --prefix '~'"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "autod": "*",
+    "jshint": "*",
+    "mocha": "*",
+    "should": "~4.3.1"
+  },
+  "homepage": "https://github.com/node-modules/enum",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/node-modules/enum.git"
+  },
+  "bugs": {
+    "url": "https://github.com/node-modules/enum/issues",
+    "email": "tangyao@taobao.com"
+  },
+  "keywords": [
+    "enum"
+  ],
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "license": "MIT"
+}
