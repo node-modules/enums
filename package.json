@@ -1,7 +1,7 @@
 {
-  "name": "enum",
+  "name": "enums",
   "version": "0.0.0",
-  "description": "enum define",
+  "description": "Compatible for java Enum",
   "main": "index.js",
   "scripts": {
     "test": "mocha --check-leaks -R spec test/*.test.js",
@@ -16,17 +16,18 @@
     "mocha": "*",
     "should": "~4.3.1"
   },
-  "homepage": "https://github.com/node-modules/enum",
+  "homepage": "https://github.com/node-modules/enums",
   "repository": {
     "type": "git",
-    "url": "git://github.com/node-modules/enum.git"
+    "url": "git://github.com/node-modules/enums.git"
   },
   "bugs": {
-    "url": "https://github.com/node-modules/enum/issues",
+    "url": "https://github.com/node-modules/enums/issues",
     "email": "tangyao@taobao.com"
   },
   "keywords": [
-    "enum"
+    "enums",
+    "java"
   ],
   "engines": {
     "node": ">= 0.10.0"
