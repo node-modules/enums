@@ -25,10 +25,14 @@ function Enums(enums) {
 }
 
 Enums.prototype.getByCode = function (code) {
+  return this.getBy('code', code);
+};
+
+Enums.prototype.getBy = function (name, val) {
   var enums = this.enums;
   for (var i = 0, len = enums.length; i < len; i++) {
     var item = enums[i];
-    if (item.code === code) {
+    if (item[name] === val) {
       return item;
     }
   }

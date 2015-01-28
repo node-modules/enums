@@ -24,6 +24,7 @@ describe('enums', function () {
     'OPENED'.should.eql(status.OPENED.name);
     status.CLOSED.should.have.property('code', '1');
     status.getByCode('1').should.have.property('name', 'CLOSED');
+    status.getBy('name', 'CLOSED').should.have.property('name', 'CLOSED');
   });
 
 });
