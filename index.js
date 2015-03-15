@@ -19,6 +19,7 @@ function Enums(enums) {
     if (typeof item === 'string') {
       item = {name: item};
     }
+    item.ordinal = i;
     this[item.name] = item;
     this.enums.push(item);
   }

@@ -23,6 +23,7 @@ describe('enums', function () {
     'CLOSED'.should.eql(status.CLOSED.name);
     'OPENED'.should.eql(status.OPENED.name);
     status.CLOSED.should.have.property('code', '1');
+    status.CLOSED.should.have.property('ordinal', 0);
     status.getByCode('1').should.have.property('name', 'CLOSED');
     status.getBy('name', 'CLOSED').should.have.property('name', 'CLOSED');
   });
