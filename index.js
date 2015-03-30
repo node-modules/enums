@@ -20,6 +20,12 @@ function Enums(enums) {
       item = {name: item};
     }
     item.ordinal = i;
+    item.eql = function (that) {
+      if (!that || !that.name) {
+        return false;
+      }
+      return this.name === that.name;
+    }
     this[item.name] = item;
     this.enums.push(item);
   }

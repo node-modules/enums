@@ -26,6 +26,8 @@ describe('enums', function () {
     status.CLOSED.should.have.property('ordinal', 0);
     status.getByCode('1').should.have.property('name', 'CLOSED');
     status.getBy('name', 'CLOSED').should.have.property('name', 'CLOSED');
+    status.CLOSED.eql(status.CLOSED).should.be.true;
+    status.CLOSED.eql(status.OPENED).should.be.false;
   });
 
 });
