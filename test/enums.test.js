@@ -28,6 +28,9 @@ describe('enums', function () {
     status.getBy('name', 'CLOSED').should.have.property('name', 'CLOSED');
     status.CLOSED.eql(status.CLOSED).should.be.true;
     status.CLOSED.eql(status.OPENED).should.be.false;
+
+    var status2 = new Enums(status);
+    status2.should.have.property('CLOSED');
   });
 
 });

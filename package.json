@@ -1,6 +1,6 @@
 {
   "name": "enums",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Compatible for java Enum",
   "main": "index.js",
   "scripts": {
@@ -8,6 +8,7 @@
     "jshint": "jshint .",
     "autod": "autod -w --prefix '~'"
   },
+  "files": ["index.js"],
   "dependencies": {
   },
   "devDependencies": {

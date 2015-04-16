@@ -1,5 +1,5 @@
 /**!
- * enum - index.js
+ * enums - index.js
  *
  * MIT Licensed
  *
@@ -9,13 +9,17 @@
 
 'use strict';
 
-function Enums(enums) {
-  this.enums = [];
-  if (!Array.isArray(enums)) {
-    enums = [enums];
+function Enums(items) {
+  items = items || [];
+  if (items.constructor.name === 'Enums') {
+    items = items.enums;
   }
-  for (var i = 0, len = enums.length; i < len; i++) {
-    var item = enums[i];
+  this.enums = [];
+  if (!Array.isArray(items)) {
+    items = [items];
+  }
+  for (var i = 0, len = items.length; i < len; i++) {
+    var item = items[i];
     if (typeof item === 'string') {
       item = {name: item};
     }
