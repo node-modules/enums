@@ -4,18 +4,20 @@
   "description": "Compatible for java Enum",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --check-leaks -R spec test/*.test.js",
-    "jshint": "jshint .",
-    "autod": "autod -w --prefix '~'"
+    "test": "mocha -R spec test/*.test.js",
+    "test-cov": "istanbul cover _mocha -- -R spec test/*.test.js",
+    "lint": "jshint .",
+    "ci": "npm run lint && npm run test-cov"
   },
-  "files": ["index.js"],
-  "dependencies": {
-  },
+  "files": [
+    "index.js"
+  ],
+  "dependencies": {},
   "devDependencies": {
-    "autod": "*",
     "jshint": "*",
     "mocha": "*",
-    "should": "~4.3.1"
+    "should": "8",
+    "istanbul": "^0.4.2"
   },
   "homepage": "https://github.com/node-modules/enums",
   "repository": {

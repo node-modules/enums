@@ -1,10 +1,11 @@
-var should = require('should');
+'use strict';
 
+var should = require('should');
 var Enums = require('../');
 
-describe('enums', function () {
+describe('test/enums.test.js', function() {
 
-  it('enums', function () {
+  it('new Enums()', function() {
     var status = new Enums([
       {
         name: 'CLOSED',
@@ -18,6 +19,8 @@ describe('enums', function () {
       }
     ]);
     should.exist(status);
+    console.log(status.CLOSED);
+    console.log(status.OPENED);
     status.should.have.property('CLOSED');
     status.should.have.property('OPENED');
     'CLOSED'.should.eql(status.CLOSED.name);
