@@ -1,10 +1,8 @@
-/**!
- * enums - index.js
- *
+/**
  * MIT Licensed
  *
  * Authors:
- *   汤尧 <tangyao@taobao.com> 
+ *   汤尧 <tangyao@taobao.com>
  */
 
 'use strict';
