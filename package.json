@@ -1,6 +1,6 @@
 {
   "name": "enums",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Compatible for java Enum",
   "main": "index.js",
   "scripts": {
