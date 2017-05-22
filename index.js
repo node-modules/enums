@@ -19,25 +19,29 @@ function Enums(items) {
   for (var i = 0, len = items.length; i < len; i++) {
     var item = items[i];
     if (typeof item === 'string') {
-      item = {name: item};
+      item = { name: item };
     }
     item.ordinal = i;
-    item.eql = function (that) {
-      if (!that || !that.name) {
-        return false;
-      }
-      return this.name === that.name;
-    }
+    Object.defineProperty(item, 'eql', {
+      configurable: true,
+      enumerable: false,
+      value: function(that) {
+        if (!that || !that.name) {
+          return false;
+        }
+        return this.name === that.name;
+      },
+    });
     this[item.name] = item;
     this.enums.push(item);
   }
 }
 
-Enums.prototype.getByCode = function (code) {
+Enums.prototype.getByCode = function(code) {
   return this.getBy('code', code);
 };
 
-Enums.prototype.getBy = function (name, val) {
+Enums.prototype.getBy = function(name, val) {
   var enums = this.enums;
   for (var i = 0, len = enums.length; i < len; i++) {
     var item = enums[i];
@@ -48,7 +52,7 @@ Enums.prototype.getBy = function (name, val) {
   return null;
 };
 
-Enums.prototype.values = function () {
+Enums.prototype.values = function() {
   return this.enums;
 };
 
