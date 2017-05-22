@@ -59,7 +59,6 @@
     "sub"           : false,     // true: Tolerate using `[]` notation when it can still be expressed in dot notation
     "supernew"      : false,     // true: Tolerate `new function () { ... };` and `new Object;`
     "validthis"     : false,     // true: Tolerate using this in a non-constructor function
-
     // Environments
     "browser"       : true,     // Web Browser (window, document, etc)
     "couch"         : false,    // CouchDB
@@ -75,13 +74,11 @@
     "wsh"           : false,    // Windows Scripting Host
     "yui"           : false,    // Yahoo User Interface
     "noyield"       : true,     // allow generators without a yield
-
     // Legacy
     "nomen"         : false,    // true: Prohibit dangling `_` in variables
     "onevar"        : false,    // true: Allow only one `var` statement per function
     "passfail"      : false,    // true: Stop on first error
     "white"         : false,    // true: Check against strict whitespace and indentation rules
-
     // Custom Globals
     "globals"       : {         // additional predefined global variables
       // mocha
