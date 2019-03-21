@@ -29,10 +29,10 @@ function Enums(items) {
         if (!that || !that.name) {
           return false;
         }
-        return this.name === that.name;
+        return (this.$name !== undefined && that.$name !== undefined && this.$name !== null && that.$name !== null && this.$name === that.$name) || this.name === that.name;
       },
     });
-    this[item.name] = item;
+    this[item.$name || item.name] = item;
     this.enums.push(item);
   }
 }
